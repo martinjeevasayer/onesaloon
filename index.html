@@ -3,809 +3,549 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>One Saloon - Traditional Barber in Rajahmundry</title>
-    <meta name="description" content="One Saloon offers vintage haircuts, beard shaving (₹50), and facials (₹150) in Bommuru, Rajahmundry. Book via WhatsApp (+91 7569449383).">
-    <meta name="google-site-verification" content="wOoaeC52lpPbYS5Ldwofdcfg-jSJBvcoZG8n-cEe1IY" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Quintessential&display=swap" rel="stylesheet">
+    <title>SRI DEVI ONE SALOON - Premium Grooming in Rajahmundry</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Vintage Color Scheme */
         :root {
-            --primary: #8B4513; /* SaddleBrown */
-            --secondary: #D2B48C; /* Tan */
-            --accent: #CD853F; /* Peru */
-            --light: #F5DEB3; /* Wheat */
-            --dark: #5C4033; /* Dark Brown */
-            --text: #333333;
+            --primary: #d4af37; /* Gold */
+            --secondary: #8b4513; /* Brown */
+            --bg: #f5f5f5;
+            --white: #fff;
+            --dark: #212121;
         }
-        
+
         body {
-            font-family: 'Times New Roman', serif;
-            background-color: var(--light);
-            color: var(--text);
+            font-family: 'Poppins', sans-serif;
             margin: 0;
-            padding: 0;
+            background-color: var(--bg);
+            color: var(--dark);
             line-height: 1.6;
-            background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
         }
-        
+
+        header {
+            background: linear-gradient(135deg, var(--secondary), #5a2d0c);
+            color: var(--white);
+            padding: 2rem 1rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .logo-container {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            border: 3px solid var(--primary);
+            overflow: hidden;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .ac-tag {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--dark);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 2rem;
         }
-        
-        /* Header Styles */
-        header {
-            background-color: var(--primary);
-            color: white;
-            padding: 20px 0;
-            border-bottom: 5px solid var(--accent);
-            position: relative;
-        }
-        
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-family: 'Quintessential', cursive;
-            font-size: 3rem;
-            color: var(--light);
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            position: relative;
-            background-color: black;
-            padding: 10px 20px;
-            border-radius: 5px;
-        }
-        
-        .logo-subtext {
-            font-family: 'Times New Roman', serif;
-            font-size: 0.8rem;
-            display: block;
-            text-align: center;
-            margin-top: -5px;
-            color: var(--secondary);
-            text-shadow: none;
-            letter-spacing: 1px;
-        }
-        
-        .contact-info {
-            text-align: right;
-        }
-        
-        /* Navigation */
-        nav {
-            background-color: var(--dark);
-            padding: 10px 0;
-        }
-        
-        nav ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        
-        nav li {
-            margin: 0 15px;
-        }
-        
-        nav a {
-            color: var(--light);
-            text-decoration: none;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: color 0.3s;
-        }
-        
-        nav a:hover {
-            color: var(--accent);
-        }
-        
-        /* Hero Section */
+
         .hero {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-            height: 500px;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('salon-interior.jpg') no-repeat center center/cover;
+            height: 60vh;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
+            color: var(--white);
             text-align: center;
-            color: white;
-            position: relative;
         }
-        
-        .hero-content {
-            max-width: 800px;
-            padding: 20px;
-        }
-        
+
         .hero h1 {
             font-size: 3rem;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
-        
+
         .hero p {
             font-size: 1.2rem;
-            margin-bottom: 30px;
+            max-width: 600px;
+            margin: 1rem auto;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
         }
-        
-        .btn {
-            display: inline-block;
-            background-color: var(--accent);
-            color: white;
-            padding: 12px 30px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-            border: none;
-            cursor: pointer;
+
+        .section {
+            padding: 3rem 1rem;
+            text-align: center;
         }
-        
-        .btn:hover {
-            background-color: var(--primary);
-        }
-        
-        /* Services Section */
-        .services {
-            padding: 60px 0;
-            background-color: white;
-        }
-        
+
         .section-title {
-            text-align: center;
-            margin-bottom: 40px;
-            font-size: 2.5rem;
-            color: var(--primary);
             position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--secondary);
         }
-        
+
         .section-title:after {
-            content: "";
-            display: block;
-            width: 100px;
-            height: 3px;
-            background-color: var(--accent);
-            margin: 15px auto;
-        }
-        
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .service-card {
-            background-color: var(--light);
-            padding: 25px;
-            border-radius: 5px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-            border: 1px solid var(--secondary);
-        }
-        
-        .service-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .service-card h3 {
-            color: var(--primary);
-            margin-bottom: 15px;
-            font-size: 1.5rem;
-            border-bottom: 2px solid var(--accent);
-            padding-bottom: 10px;
-        }
-        
-        .price {
-            font-weight: bold;
-            color: var(--dark);
-            font-size: 1.2rem;
-            margin: 15px 0;
-        }
-        
-        /* Service Images */
-        .service-image-container {
-            height: 200px;
-            overflow: hidden;
-            border-radius: 5px 5px 0 0;
-            margin: -25px -25px 20px -25px;
-            border-bottom: 2px solid var(--accent);
-        }
-        
-        .service-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
-            filter: sepia(30%) contrast(110%);
-        }
-        
-        .service-card:hover .service-image {
-            transform: scale(1.05);
-            filter: sepia(0%) contrast(100%);
-        }
-        
-        /* Testimonials */
-        .testimonials {
-            padding: 60px 0;
-            background-color: white;
-        }
-        
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .testimonial-card {
-            background-color: var(--light);
-            padding: 25px;
-            border-radius: 5px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            position: relative;
-            border: 1px solid var(--secondary);
-        }
-        
-        .testimonial-card:before {
-            content: """;
-            font-family: Georgia, serif;
-            font-size: 4rem;
-            color: var(--accent);
+            content: '';
             position: absolute;
-            top: 10px;
-            left: 10px;
-            opacity: 0.3;
+            width: 50%;
+            height: 3px;
+            background: var(--primary);
+            bottom: -10px;
+            left: 25%;
         }
-        
-        .testimonial-text {
-            margin-bottom: 20px;
-            font-style: italic;
-        }
-        
-        .testimonial-author {
-            font-weight: bold;
-            text-align: right;
-            color: var(--primary);
-        }
-        
-        /* Booking Section */
-        .booking {
-            padding: 60px 0;
-            background-color: var(--light);
-        }
-        
-        .booking-container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 40px;
-            border-radius: 5px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            border: 1px solid var(--secondary);
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-            color: var(--primary);
-        }
-        
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid var(--secondary);
-            border-radius: 5px;
-            font-family: inherit;
-        }
-        
-        /* Offers Section */
-        .offers {
-            padding: 60px 0;
-            background-color: white;
-        }
-        
-        .offer-card {
-            background-color: var(--light);
-            padding: 25px;
-            border-radius: 5px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
-            border: 2px dashed var(--accent);
-            text-align: center;
-        }
-        
-        .offer-card h3 {
-            color: var(--primary);
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-        }
-        
-        /* Footer */
-        footer {
-            background-color: var(--dark);
-            color: white;
-            padding: 40px 0 20px;
-            text-align: center;
-        }
-        
-        .footer-content {
+
+        .services {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-bottom: 30px;
+            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            padding: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .card-image {
+            height: 220px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-content h3 {
+            margin: 0 0 1rem;
+            color: var(--secondary);
+            font-size: 1.3rem;
+        }
+
+        .service-list {
+            list-style: none;
+            padding: 0;
             text-align: left;
         }
-        
-        .footer-column h3 {
-            color: var(--light);
-            margin-bottom: 20px;
-            font-size: 1.3rem;
-            position: relative;
+
+        .service-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px dashed #eee;
+            display: flex;
+            align-items: center;
+        }
+
+        .service-list li:last-child {
+            border-bottom: none;
+        }
+
+        .service-list i {
+            color: var(--primary);
+            margin-right: 10px;
+        }
+
+        .contact-info {
+            padding: 2rem;
+            background: var(--white);
+            border-top: 5px solid var(--primary);
+            margin: 2rem auto;
+            max-width: 600px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-radius: 5px;
+        }
+
+        .contact-info h2 {
+            margin-top: 0;
+            color: var(--secondary);
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            margin: 1rem 0;
+        }
+
+        .contact-detail i {
+            color: var(--primary);
+            margin-right: 10px;
+            font-size: 1.2rem;
+            width: 25px;
+            text-align: center;
+        }
+
+        .timing {
+            background: var(--secondary);
+            color: white;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-top: 1.5rem;
+        }
+
+        .timing h3 {
+            margin-top: 0;
+            color: var(--primary);
+        }
+
+        .review-form-container {
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 2rem;
+            max-width: 500px;
+            margin: 2rem auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .btn {
+            background: var(--primary);
+            color: var(--dark);
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
             display: inline-block;
         }
-        
-        .footer-column h3:after {
-            content: "";
-            display: block;
-            width: 50px;
-            height: 2px;
-            background-color: var(--accent);
-            margin-top: 5px;
+
+        .btn:hover {
+            background: #c9a227;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
-        
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        
-        .social-links a {
-            color: white;
-            font-size: 1.5rem;
-            transition: color 0.3s;
-        }
-        
-        .social-links a:hover {
-            color: var(--accent);
-        }
-        
-        .copyright {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 20px;
-            margin-top: 20px;
-        }
-        
-        /* WhatsApp Button */
-        .whatsapp-btn {
+
+        .whatsapp-float {
             position: fixed;
             bottom: 30px;
             right: 30px;
-            background-color: #25D366;
+            background-color: #25d366;
             color: white;
+            border-radius: 50%;
             width: 60px;
             height: 60px;
-            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            z-index: 100;
-            transition: transform 0.3s;
+            font-size: 1.8rem;
+            z-index: 1000;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
         }
-        
-        .whatsapp-btn:hover {
+
+        .whatsapp-float:hover {
             transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
         }
-        
-        /* Responsive Adjustments */
+
+        footer {
+            text-align: center;
+            background: var(--dark);
+            color: white;
+            padding: 2rem 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-links {
+            margin: 1rem 0;
+        }
+
+        .social-links a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--primary);
+        }
+
         @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                text-align: center;
+            .hero h1 {
+                font-size: 2rem;
+                padding: 0 1rem;
             }
             
-            .logo {
-                font-size: 2.5rem;
-                margin-bottom: 15px;
+            .hero p {
+                font-size: 1rem;
+                padding: 0 1rem;
+            }
+            
+            .services {
+                grid-template-columns: 1fr;
             }
             
             .contact-info {
-                text-align: center;
-                margin-top: 15px;
+                padding: 1.5rem;
             }
-            
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            nav li {
-                margin: 5px 0;
-            }
-            
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-        }
-        
-        /* Vintage Effects */
-        .vintage-border {
-            border: 15px solid transparent;
-            border-image: url('https://www.transparenttextures.com/patterns/old-map.png') 30 round;
-            padding: 10px;
-            margin: 20px 0;
-        }
-        
-        .old-paper {
-            background-image: url('https://www.transparenttextures.com/patterns/old-paper.png');
-            padding: 30px;
-            border-radius: 5px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
-        <div class="container header-content">
-            <div class="logo">One Saloon
-                <span class="logo-subtext">Sridevi</span>
-            </div>
-            <div class="contact-info">
-                <p><i class="fas fa-map-marker-alt"></i> Bommuru, Rajahmundry 533124</p>
-                <p><i class="fas fa-phone"></i> +91 7569449383</p>
-            </div>
+        <div class="logo-container">
+            <!-- Replace with your logo -->
+            <img src="salon-logo.png" alt="SRI DEVI ONE SALOON Logo">
         </div>
+        <h1>SRI DEVI ONE SALOON</h1>
+        <p>Premium Kids & Men's Grooming Center</p>
+        <div class="ac-tag">FULLY AIR CONDITIONED</div>
     </header>
-    
-    <!-- Navigation -->
-    <nav>
-        <div class="container">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#booking">Book Now</a></li>
-            </ul>
-        </div>
-    </nav>
-    
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>Traditional Barber Services</h1>
-            <p>Experience the classic art of barbering in our vintage-style salon. Quality service with old-world charm.</p>
-            <a href="#booking" class="btn">Book an Appointment</a>
-        </div>
-    </section>
-    
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="container">
-            <h2 class="section-title">Our Services</h2>
-            <div class="services-grid">
-                <!-- Hair Services -->
-                <div class="service-card">
-                    <div class="service-image-container">
-                        <img src="https://images.unsplash.com/photo-1621607512214-68297480165e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Fade Haircut" class="service-image">
-                    </div>
-                    <h3>Fade Haircut</h3>
-                    <p>A modern classic with a gradual taper from short to shorter hair.</p>
-                    <div class="price">₹100</div>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-image-container">
-                        <img src="https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Buzz Cut" class="service-image">
-                    </div>
-                    <h3>Buzz Cut</h3>
-                    <p>A very short haircut achieved with clippers for a clean, uniform look.</p>
-                    <div class="price">₹100</div>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-image-container">
-                        <img src="https://images.unsplash.com/photo-1596704017254-975f30f2cd8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Faux Hawk" class="service-image">
-                    </div>
-                    <h3>Faux Hawk</h3>
-                    <p>A stylish alternative to the mohawk with shorter sides and textured top.</p>
-                    <div class="price">₹100</div>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-image-container">
-                        <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Side Part" class="service-image">
-                    </div>
-                    <h3>Side Part</h3>
-                    <p>A timeless, professional style with a clean part on one side.</p>
-                    <div class="price">₹100</div>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-image-container">
-                        <img src="https://images.unsplash.com/photo-1513201099705-a9746e1e201f?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Pompadour" class="service-image">
-                    </div>
-                    <h3>Pompadour</h3>
-                    <p>A voluminous classic with short sides and back, long on top.</p>
-                    <div class="price">₹100</div>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-image-container">
-                        <img src="https://images.unsplash.com/photo-1583864697784-a0efc8379f70?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Crew Cut" class="service-image">
-                    </div>
-                    <h3>Crew Cut</h3>
-                    <p>A short back and sides with slightly longer hair on top.</p>
-                    <div class="price">₹100</div>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-image-container">
-                        <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Man Bun" class="service-image">
-                    </div>
-                    <h3>Man Bun</h3>
-                    <p>Styling and maintenance for your man bun or top knot.</p>
-                    <div class="price">₹100</div>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-image-container">
-                        <img src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Slicked Back" class="service-image">
-                    </div>
-                    <h3>Slicked Back</h3>
-                    <p>A smooth, polished look with hair combed back.</p>
-                    <div class="price">₹100</div>
-                </div>
-                
-                <!-- Other Services -->
-                <div class="service-card">
-                    <div class="service-image-container">
-                        <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Beard Shaving" class="service-image">
-                    </div>
-                    <h3>Beard Shaving</h3>
-                    <p>Traditional straight razor shave with hot towels.</p>
-                    <div class="price">₹50</div>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-image-container">
-                        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Facial Treatment" class="service-image">
-                    </div>
-                    <h3>Facial Treatment</h3>
-                    <p>Deep cleansing and rejuvenation for your face.</p>
-                    <div class="price">₹150</div>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-image-container">
-                        <img src="https://images.unsplash.com/photo-1544168213-3f2c79cd5908?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Head Massage" class="service-image">
-                    </div>
-                    <h3>Head Massage</h3>
-                    <p>Relaxing massage to relieve tension and stress.</p>
-                    <div class="price">₹50</div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Special Offers -->
-    <section class="offers">
-        <div class="container">
-            <h2 class="section-title">Special Offers</h2>
-            <div class="offer-card">
-                <h3>First Visit Discount</h3>
-                <p>Get <strong>20% off</strong> any service on your first visit to One Saloon!</p>
-            </div>
-            
-            <div class="offer-card">
-                <h3>Refer a Friend</h3>
-                <p>Refer a friend and both get <strong>₹50 off</strong> your next service!</p>
-            </div>
-            
-            <div class="offer-card">
-                <h3>Monthly Maintenance Package</h3>
-                <p>Pre-pay for 4 haircuts and get them for just <strong>₹350</strong> (save ₹50)!</p>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Testimonials -->
-    <section class="testimonials" id="testimonials">
-        <div class="container">
-            <h2 class="section-title">What Our Clients Say</h2>
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <p class="testimonial-text">Best haircut I've ever had! The fade was perfect and the attention to detail was amazing. Will definitely be coming back.</p>
-                    <p class="testimonial-author">- Ravi Kumar</p>
-                </div>
-                
-                <div class="testimonial-card">
-                    <p class="testimonial-text">The old-school vibe of this place is fantastic. Great service at reasonable prices. My go-to barber now.</p>
-                    <p class="testimonial-author">- Arjun Patel</p>
-                </div>
-                
-                <div class="testimonial-card">
-                    <p class="testimonial-text">Love the monthly reminders! I always forget when I need a haircut, but One Saloon keeps me looking sharp.</p>
-                    <p class="testimonial-author">- Suresh Reddy</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Booking Section -->
-    <section class="booking" id="booking">
-        <div class="container">
-            <h2 class="section-title">Book Your Appointment</h2>
-            <div class="booking-container old-paper">
-                <form id="appointment-form">
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email (optional)</label>
-                        <input type="email" id="email" name="email">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="service">Service</label>
-                        <select id="service" name="service" required>
-                            <option value="">Select a service</option>
-                            <option value="fade">Fade Haircut - ₹100</option>
-                            <option value="buzz">Buzz Cut - ₹100</option>
-                            <option value="faux">Faux Hawk - ₹100</option>
-                            <option value="side">Side Part - ₹100</option>
-                            <option value="pomp">Pompadour - ₹100</option>
-                            <option value="crew">Crew Cut - ₹100</option>
-                            <option value="bun">Man Bun - ₹100</option>
-                            <option value="slick">Slicked Back - ₹100</option>
-                            <option value="beard">Beard Shaving - ₹50</option>
-                            <option value="facial">Facial Treatment - ₹150</option>
-                            <option value="massage">Head Massage - ₹50</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="date">Preferred Date</label>
-                        <input type="date" id="date" name="date" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="time">Preferred Time</label>
-                        <input type="time" id="time" name="time" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>
-                            <input type="checkbox" name="reminder_consent" checked>
-                            Receive monthly haircut reminders via WhatsApp
-                        </label>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="notes">Special Requests</label>
-                        <textarea id="notes" name="notes" rows="3"></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn">Book Now</button>
-                </form>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>One Saloon</h3>
-                    <p>Traditional barber services with vintage charm in the heart of Rajahmundry.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="https://wa.me/917569449383"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Contact Us</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Bommuru, Rajahmundry 533124</p>
-                    <p><i class="fas fa-phone"></i> +91 7569449383</p>
-                    <p><i class="fas fa-clock"></i> Open Daily: 9AM - 8PM</p>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul style="list-style: none; padding: 0;">
-                        <li><a href="#home" style="color: white; text-decoration: none;">Home</a></li>
-                        <li><a href="#services" style="color: white; text-decoration: none;">Services</a></li>
-                        <li><a href="#testimonials" style="color: white; text-decoration: none;">Testimonials</a></li>
-                        <li><a href="#booking" style="color: white; text-decoration: none;">Book Now</a></li>
+
+    <div class="hero">
+        <h1>Style That Speaks Volumes</h1>
+        <p>Experience luxury grooming in our comfortable A/C environment with expert stylists</p>
+    </div>
+
+    <section class="section">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services">
+            <div class="card">
+                <div class="card-image" style="background-image: url('beard-service.jpg');"></div>
+                <div class="card-content">
+                    <h3>Beard Services</h3>
+                    <ul class="service-list">
+                        <li><i class="fas fa-cut"></i> Beard Shaving</li>
+                        <li><i class="fas fa-cut"></i> Foam Shaving</li>
+                        <li><i class="fas fa-cut"></i> Beard Trimming</li>
+                        <li><i class="fas fa-cut"></i> Beard Styling</li>
                     </ul>
                 </div>
             </div>
             
-            <div class="copyright">
-                <p>&copy; 2023 One Saloon. All Rights Reserved.</p>
-                <p style="font-size: 0.8rem; margin-top: 5px;">Sridevi</p>
+            <div class="card">
+                <div class="card-image" style="background-image: url('haircut-service.jpg');"></div>
+                <div class="card-content">
+                    <h3>Hair Services</h3>
+                    <ul class="service-list">
+                        <li><i class="fas fa-cut"></i> Normal Haircut</li>
+                        <li><i class="fas fa-cut"></i> Style Haircuts</li>
+                        <li><i class="fas fa-child"></i> Kids Haircut</li>
+                        <li><i class="fas fa-paint-brush"></i> Hair Dye</li>
+                        <li><i class="fas fa-spa"></i> Head Massage</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-image" style="background-image: url('facial-service.jpg');"></div>
+                <div class="card-content">
+                    <h3>Facials & More</h3>
+                    <ul class="service-list">
+                        <li><i class="fas fa-spa"></i> All Types of Facials</li>
+                        <li><i class="fas fa-spa"></i> Skin-Specific Treatments</li>
+                        <li><i class="fas fa-spa"></i> Premium Products</li>
+                        <li><i class="fas fa-spa"></i> Relaxing Experience</li>
+                    </ul>
+                </div>
             </div>
         </div>
+    </section>
+
+    <section class="contact-info">
+        <h2>Contact Us</h2>
+        <div class="contact-detail">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Near NTR Statue, Rajavolu Road, Bommuru Centre, Rajahmundry - 533124</span>
+        </div>
+        <div class="contact-detail">
+            <i class="fas fa-phone"></i>
+            <span><a href="tel:9866779426" style="color: inherit; text-decoration: none;">9866779426</a></span>
+        </div>
+        <div class="contact-detail">
+            <i class="fas fa-envelope"></i>
+            <span>sridevionesaloon@gmail.com</span>
+        </div>
+        
+        <div class="timing">
+            <h3>Working Hours</h3>
+            <p><i class="far fa-clock"></i> Monday - Sunday: 7:00 AM - 9:00 PM</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="review-form-container">
+            <h2 class="section-title">Share Your Experience</h2>
+            <form id="reviewForm">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Mobile Number</label>
+                    <input type="tel" id="phone" class="form-control" placeholder="Enter 10-digit mobile number" required>
+                </div>
+                <button type="submit" class="btn">Send WhatsApp Review Request</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/919866779426"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <p>SRI DEVI ONE SALOON - Premium Grooming in A/C Comfort</p>
+        <p>© 2023 All Rights Reserved</p>
     </footer>
-    
-    <!-- WhatsApp Button -->
-    <a href="https://wa.me/917569449383" class="whatsapp-btn">
+
+    <a href="https://wa.me/919866779426" target="_blank" class="whatsapp-float">
         <i class="fab fa-whatsapp"></i>
     </a>
-    
-    <!-- JavaScript for Form Submission and WhatsApp Reminders -->
+
     <script>
-        document.getElementById('appointment-form').addEventListener('submit', function(e) {
+        document.getElementById('reviewForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Get form values
-            const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
-            const service = document.getElementById('service').value;
-            const date = document.getElementById('date').value;
-            const time = document.getElementById('time').value;
-            const wantsReminders = document.querySelector('[name="reminder_consent"]').checked;
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
             
-            // Format WhatsApp message
-            const message = `Hi One Saloon! I'd like to book an appointment:
-Name: ${name}
-Phone: ${phone}
-Service: ${document.getElementById('service').options[document.getElementById('service').selectedIndex].text}
-Date: ${date}
-Time: ${time}
-Monthly Reminders: ${wantsReminders ? 'Yes' : 'No'}`;
+            // Validation
+            if (!/^[a-zA-Z ]+$/.test(name)) {
+                alert('Please enter a valid name (letters only)');
+                return;
+            }
             
-            // Encode message for URL
-            const encodedMessage = encodeURIComponent(message);
+            if (!/^[6-9]\d{9}$/.test(phone)) {
+                alert('Please enter a valid 10-digit Indian mobile number');
+                return;
+            }
             
-            // Open WhatsApp with pre-filled message
-            window.open(`https://wa.me/917569449383?text=${encodedMessage}`, '_blank');
+            const formattedPhone = phone.length === 10 ? `91${phone}` : phone;
+            
+            // Create WhatsApp review message
+            const reviewMessage = `Hi ${name}, thank you for visiting *SRI DEVI ONE SALOON*! 🌟\n\nWe hope you enjoyed your grooming experience in our A/C salon.\nPlease *rate us (1-5 stars)* and leave your valuable review.\n\nYour feedback helps us serve you better! 🙏\n\n- Team Sri Devi One Saloon`;
+            const whatsappURL = `https://wa.me/${formattedPhone}?text=${encodeURIComponent(reviewMessage)}`;
+            
+            // Open WhatsApp with review message
+            window.open(whatsappURL, '_blank');
+            
+            // Send data to Google Apps Script for reminder scheduling
+            const scriptUrl = 'https://script.google.com/macros/s/YOUR_GOOGLE_SCRIPT_ID/exec';
+            
+            fetch(scriptUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    customer_name: name,
+                    customer_phone: formattedPhone,
+                    salon_name: 'SRI DEVI ONE SALOON',
+                    reminder_days: 10, // Set reminder for 10 days later
+                    salon_phone: '919866779426',
+                    message_type: 'review_and_reminder'
+                })
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Reminder scheduled successfully:', data);
+            })
+            .catch(error => {
+                console.error('Error scheduling reminder:', error);
+            });
             
             // Reset form
             this.reset();
             
             // Show confirmation
-            alert('Your appointment request has been sent via WhatsApp! We will confirm shortly.');
+            alert('Thank you! A WhatsApp message has been prepared for your review. We will send you a friendly reminder after 10 days.');
         });
+
+        // Google Apps Script would handle the reminder with this function:
+        /*
+        function doPost(e) {
+            const data = JSON.parse(e.postData.contents);
+            const triggerDate = new Date();
+            triggerDate.setDate(triggerDate.getDate() + data.reminder_days);
+            
+            // Schedule the trigger
+            ScriptApp.newTrigger('sendReminder')
+                .timeBased()
+                .at(triggerDate)
+                .create();
+            
+            // Store customer data in PropertiesService
+            const props = PropertiesService.getScriptProperties();
+            props.setProperty(triggerDate.getTime().toString(), JSON.stringify({
+                phone: data.customer_phone,
+                name: data.customer_name,
+                salon: data.salon_name,
+                salon_phone: data.salon_phone
+            }));
+            
+            return ContentService.createTextOutput(JSON.stringify({status: 'success'}));
+        }
         
-        // Check if it's the 1st of the month and show admin reminder
-        document.addEventListener('DOMContentLoaded', function() {
-            const today = new Date();
-            if (today.getDate() === 1) {
-                console.log("It's the 1st of the month - time to send haircut reminders!");
-                // In production, this would automatically send reminders via backend
-            }
-        });
+        function sendReminder(e) {
+            const props = PropertiesService.getScriptProperties();
+            const data = JSON.parse(props.getProperty(e.triggerUid));
+            
+            const reminderMessage = `Hi ${data.name}, it's been 10 days since your last visit to *${data.salon}*! ✂️\n\nYour hair/beard might need some attention. We'd love to see you again in our comfortable A/C salon!\n\nBook your appointment: ${data.salon_phone}`;
+            
+            // In a real implementation, you would send this via WhatsApp Business API
+            console.log(`Would send reminder to ${data.phone}: ${reminderMessage}`);
+            
+            // Clean up
+            props.deleteProperty(e.triggerUid);
+        }
+        */
     </script>
 </body>
 </html>
