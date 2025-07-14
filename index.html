@@ -50,15 +50,54 @@
             object-fit: contain;
         }
 
-        .ac-tag {
+        /* Updated Salon Title Styling */
+        .salon-title-container {
+            background-color: #000;
+            padding: 15px 30px;
+            border-radius: 8px;
             display: inline-block;
+            margin: 10px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        .salon-name {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            line-height: 1;
+        }
+
+        .sri-devi {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .one-saloon {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: white;
+            text-transform: uppercase;
+            margin-top: -5px;
+            letter-spacing: 1px;
+        }
+
+        .ac-tag-small {
             background-color: var(--primary);
             color: var(--dark);
-            padding: 5px 15px;
-            border-radius: 20px;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.7rem;
             font-weight: bold;
-            font-size: 0.9rem;
-            margin-top: 10px;
+            display: inline-block;
+            margin-top: 8px;
+        }
+
+        .ac-tag-small i {
+            margin-right: 5px;
+            font-size: 0.6rem;
         }
 
         .container {
@@ -328,6 +367,14 @@
             .contact-info {
                 padding: 1.5rem;
             }
+            
+            .sri-devi {
+                font-size: 1.8rem;
+            }
+            
+            .one-saloon {
+                font-size: 1.5rem;
+            }
         }
     </style>
 </head>
@@ -337,9 +384,18 @@
             <!-- Replace with your logo -->
             <img src="salon-logo.png" alt="SRI DEVI ONE SALOON Logo">
         </div>
-        <h1>SRI DEVI ONE SALOON</h1>
+        
+        <div class="salon-title-container">
+            <div class="salon-name">
+                <span class="sri-devi">SRI DEVI</span>
+                <span class="one-saloon">ONE SALOON</span>
+            </div>
+            <div class="ac-tag-small">
+                <i class="fas fa-snowflake"></i> A/C
+            </div>
+        </div>
+        
         <p>Premium Kids & Men's Grooming Center</p>
-        <div class="ac-tag">FULLY AIR CONDITIONED</div>
     </header>
 
     <div class="hero">
@@ -507,45 +563,6 @@
             // Show confirmation
             alert('Thank you! A WhatsApp message has been prepared for your review. We will send you a friendly reminder after 10 days.');
         });
-
-        // Google Apps Script would handle the reminder with this function:
-        /*
-        function doPost(e) {
-            const data = JSON.parse(e.postData.contents);
-            const triggerDate = new Date();
-            triggerDate.setDate(triggerDate.getDate() + data.reminder_days);
-            
-            // Schedule the trigger
-            ScriptApp.newTrigger('sendReminder')
-                .timeBased()
-                .at(triggerDate)
-                .create();
-            
-            // Store customer data in PropertiesService
-            const props = PropertiesService.getScriptProperties();
-            props.setProperty(triggerDate.getTime().toString(), JSON.stringify({
-                phone: data.customer_phone,
-                name: data.customer_name,
-                salon: data.salon_name,
-                salon_phone: data.salon_phone
-            }));
-            
-            return ContentService.createTextOutput(JSON.stringify({status: 'success'}));
-        }
-        
-        function sendReminder(e) {
-            const props = PropertiesService.getScriptProperties();
-            const data = JSON.parse(props.getProperty(e.triggerUid));
-            
-            const reminderMessage = `Hi ${data.name}, it's been 10 days since your last visit to *${data.salon}*! ✂️\n\nYour hair/beard might need some attention. We'd love to see you again in our comfortable A/C salon!\n\nBook your appointment: ${data.salon_phone}`;
-            
-            // In a real implementation, you would send this via WhatsApp Business API
-            console.log(`Would send reminder to ${data.phone}: ${reminderMessage}`);
-            
-            // Clean up
-            props.deleteProperty(e.triggerUid);
-        }
-        */
     </script>
 </body>
 </html>
