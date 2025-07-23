@@ -481,7 +481,7 @@
                     <label for="phone">Mobile Number</label>
                     <input type="tel" id="phone" class="form-control" placeholder="Enter 10-digit mobile number" required>
                 </div>
-                <button type="submit" class="btn">Send WhatsApp Review Request</button>
+                <button type="submit" class="btn">Submit Review</button>
             </form>
         </div>
     </section>
@@ -518,50 +518,38 @@
                 return;
             }
             
-            const formattedPhone = phone.length === 10 ? `91${phone}` : phone;
+            // Create WhatsApp review message to salon's number
+            const reviewMessage = `New Review Submission from ${name} (${phone})\n\nHi Sri Devi One Saloon,\n\nI recently visited your salon and would like to share my experience:\n\nRating: ⭐⭐⭐⭐⭐\nReview: [Customer can write their review here]\n\nThank you!`;
+            const whatsappURL = `https://wa.me/919866779426?text=${encodeURIComponent(reviewMessage)}`;
             
-            // Create WhatsApp review message
-            const reviewMessage = `Hi ${name}, thank you for visiting *SRI DEVI ONE SALOON*! 🌟\n\nWe hope you enjoyed your grooming experience in our A/C salon.\nPlease *rate us (1-5 stars)* and leave your valuable review.\n\nYour feedback helps us serve you better! 🙏\n\n- Team Sri Devi One Saloon`;
-            const whatsappURL = `https://wa.me/${formattedPhone}?text=${encodeURIComponent(reviewMessage)}`;
-            
-            // Open WhatsApp with review message
+            // Open WhatsApp with review message to salon's number
             window.open(whatsappURL, '_blank');
             
-            // Send data to Google Apps Script for reminder scheduling
-            const scriptUrl = 'https://script.google.com/macros/s/YOUR_GOOGLE_SCRIPT_ID/exec';
-            
-            fetch(scriptUrl, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    customer_name: name,
-                    customer_phone: formattedPhone,
-                    salon_name: 'SRI DEVI ONE SALOON',
-                    reminder_days: 10, // Set reminder for 10 days later
-                    salon_phone: '919866779426',
-                    message_type: 'review_and_reminder'
-                })
-            })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then(data => {
-                console.log('Reminder scheduled successfully:', data);
-            })
-            .catch(error => {
-                console.error('Error scheduling reminder:', error);
-            });
+            // Send data to Google Apps Script for reminder scheduling (optional)
+            // const scriptUrl = 'https://script.google.com/macros/s/YOUR_GOOGLE_SCRIPT_ID/exec';
+            // fetch(scriptUrl, {
+            //     method: 'POST',
+            //     headers: {
+            //         'Content-Type': 'application/json',
+            //     },
+            //     body: JSON.stringify({
+            //         customer_name: name,
+            //         customer_phone: phone,
+            //         salon_name: 'SRI DEVI ONE SALOON',
+            //         reminder_days: 10,
+            //         salon_phone: '919866779426',
+            //         message_type: 'review_and_reminder'
+            //     })
+            // })
+            // .then(response => response.json())
+            // .then(data => console.log('Success:', data))
+            // .catch(error => console.error('Error:', error));
             
             // Reset form
             this.reset();
             
             // Show confirmation
-            alert('Thank you! A WhatsApp message has been prepared for your review. We will send you a friendly reminder after 10 days.');
+            alert('Thank you for your review! The message has been prepared for WhatsApp. Please complete and send it to share your feedback with Sri Devi One Saloon.');
         });
     </script>
 </body>
